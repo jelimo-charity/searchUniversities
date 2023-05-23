@@ -7,7 +7,7 @@ function SearchCollege() {
 
   const fetchUniversities = async () => {
     try {
-      const response = await fetch(`http://universities.hipolabs.com/search?country=${country}`);
+      const response = await fetch(`https://universitiesapi.onrender.com/v1/api/universities/${country}`);
       const data = await response.json();
       
       const names = data.map((university) => university.name);
